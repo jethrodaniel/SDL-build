@@ -22,8 +22,7 @@ jobs:
         os:
           # - windows-latest
           - ubuntu-latest
-          # TODO: uncomment macos next time we re-build both
-          # - macos-latest
+          - macos-latest
     runs-on: ${{ matrix.os }}
 
     steps:
