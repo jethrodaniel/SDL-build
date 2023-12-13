@@ -15,3 +15,12 @@ echo "==> zig fetch returned"
 tree ~/.cache/zig/p/$(zig fetch file://`realpath SDL2-2.28.5-linux.tar.gz`)
 
 gh release upload --clobber 2.28.5 tmp/SDL2-2.28.5-linux.tar.gz
+
+# TODO: DRY this up
+
+tar czvf SDL2-2.28.5-macos.tar.gz --owner=0 --group=0 SDL2-2.28.5-macos/include SDL2-2.28.5-macos/lib/libSDL2.a SDL2-2.28.5-macos/lib/libSDL2.dylib
+
+echo "==> zig fetch returned"
+tree ~/.cache/zig/p/$(zig fetch file://`realpath SDL2-2.28.5-macos.tar.gz`)
+
+gh release upload --clobber 2.28.5 tmp/SDL2-2.28.5-macos.tar.gz
